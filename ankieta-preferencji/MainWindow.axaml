@@ -4,6 +4,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ankieta_preferencji.MainWindow"
-        Title="ankieta_preferencji">
-    Welcome to Avalonia!
+        Title="ankieta_preferencji"
+        Width="1000"
+        Height="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#34A6B3"
+        >
+       <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+               <Border Width="800" Height="800" Margin="20"
+                       Background="#2A8691" CornerRadius="30"
+               >
+                       <Grid>
+                               <Grid.RowDefinitions>
+
+                                       <RowDefinition Height="Auto" />
+
+                                       <RowDefinition Height="Auto" />
+                                       <RowDefinition Height="Auto" />
+                                       
+                               </Grid.RowDefinitions>
+                               
+                               <Grid.ColumnDefinitions>
+
+                                       <ColumnDefinition Width="Auto" />
+
+                                       <ColumnDefinition Width="Auto" />
+                                       
+                               </Grid.ColumnDefinitions>
+                       
+                       
+                       
+                       
+                            <TextBlock Grid.Row="0" Grid.Column="0"  Text="podaj swoje imie :"
+                                       Foreground="#4AEDFF" FontSize="32" FontWeight="Bold"
+                                       Height="50" Margin="20"/>
+                            
+                            <TextBox Grid.Row="0" Grid.Column="1"  x:Name="InputName" Width="200" Height="50" 
+                                     Margin="20" CornerRadius="10" Background="#20676F"/>
+                            
+                            
+                            <TextBlock Grid.Row="1" Grid.Column="0"  Text="Wybierz swoje zainteresowania :"
+                                       Foreground="#4AEDFF" FontSize="32" FontWeight="Bold"
+                                       Height="50" Margin="20"/>
+                            
+                            <ComboBox Grid.Row="1" Grid.Column="1" Margin="20" x:Name="InputIntrest" 
+                                      Background="#20676F" CornerRadius="10">
+                                    <ComboBoxItem Content="Technologia"/>
+                                    <ComboBoxItem Content="Siatkówka"/>
+                                    <ComboBoxItem Content="Kultura"/>
+                            </ComboBox>
+                            
+                            
+                            <Button Grid.Row="2" Grid.Column="0" Content="Zapisz dane" Margin="20"
+                                    Foreground="#4AEDFF" FontSize="32" FontWeight="Bold"
+                                    Background="#20676F"/>
+                       </Grid>
+           </Border>
+       </StackPanel>
+    
 </Window>
