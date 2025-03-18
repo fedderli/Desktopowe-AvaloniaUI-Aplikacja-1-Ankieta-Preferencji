@@ -12,9 +12,8 @@
         >
        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                <Border Width="800" Height="800" Margin="20"
-                       Background="#2A8691" CornerRadius="30"
-               >
-                       <Grid Name="Main">
+                       Background="#2A8691" CornerRadius="30">
+                       <Grid>
                                <Grid.RowDefinitions>
                                        
                                        <RowDefinition Height="Auto" />
@@ -60,7 +59,8 @@
                                                 <Button Grid.Row="2" Grid.Column="0" Content="Zapisz dane" Margin="20"
                                                         Foreground="#4AEDFF" FontSize="32" FontWeight="Bold"
                                                         Background="#20676F"/>
-                                        </Grid>
+                               </Grid>
+                               
                                <Grid Grid.Row="1">
                                        <Grid.RowDefinitions>
                                                <RowDefinition Height="Auto" />
@@ -84,8 +84,21 @@
                                                 <CheckBox Grid.Row="1" Grid.Column="1" Margin="20" Width="50" Height="50" />
                                                 
                                </Grid>
+                               <Grid Grid.Row="2">
+                                       <Grid.RowDefinitions>
+                                               <RowDefinition Height="Auto"/>
+                                               <RowDefinition Height="Auto"/>
+                                       </Grid.RowDefinitions>
+                                       <Grid.ColumnDefinitions>
+                                               <ColumnDefinition Width="Auto"/>
+                                       </Grid.ColumnDefinitions>
+                                                <Button Grid.Row="0" Grid.Column="0" Content="Pokaz podsumowanie" Margin="20"
+                                               Foreground="#4AEDFF" FontSize="32" FontWeight="Bold"
+                                               Background="#20676F"/>
+                                                <TextBlock Grid.Row="0" Grid.Column="0" x:Name="Summary"></TextBlock>
+                               </Grid>
                        </Grid>
-           </Border>
+               </Border>
        </StackPanel>
     
 </Window>
